@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyAirport
+namespace LucLopTatMei.MyAirport
 {
     class Program
     {
