@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace LucLopTatMei.MyAirport.EF
 {
@@ -13,13 +14,7 @@ namespace LucLopTatMei.MyAirport.EF
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Vol>()
-                .HasMany(v => v.Bagages)
-                .WithOne(b => b.Vol)
-                .OnDelete(DeleteBehavior.Cascade);
-        }
+       
     }
 
    

@@ -10,3 +10,15 @@
 /Users/tatianameister/Projects/MyAirport/MyAirport.EF/obj/Debug/netcoreapp3.1/MyAirport.EF.dll
 /Users/tatianameister/Projects/MyAirport/MyAirport.EF/obj/Debug/netcoreapp3.1/MyAirport.EF.pdb
 /Users/tatianameister/Projects/MyAirport/MyAirport.EF/obj/Debug/netcoreapp3.1/MyAirport.EF.genruntimeconfig.cache
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\bin\Debug\netcoreapp3.1\MyAirport.EF.deps.json
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\bin\Debug\netcoreapp3.1\MyAirport.EF.runtimeconfig.json
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\bin\Debug\netcoreapp3.1\MyAirport.EF.runtimeconfig.dev.json
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\bin\Debug\netcoreapp3.1\MyAirport.EF.dll
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\bin\Debug\netcoreapp3.1\MyAirport.EF.pdb
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.AssemblyInfoInputs.cache
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.AssemblyInfo.cs
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.dll
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.pdb
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.genruntimeconfig.cache
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.csproj.CoreCompileInputs.cache
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.csprojAssemblyReference.cache

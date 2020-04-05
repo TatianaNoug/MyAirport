@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/tatianameister/.dotnet/store/|arch|/|tfm|",
-      "/Users/tatianameister/.nuget/packages"
+      "C:\\Users\\skywa\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\skywa\\.nuget\\packages"
     ]
   }
 }
