@@ -1,4 +1,8 @@
-﻿using System;
+﻿using LucLopTatMei.MyAirport.EF;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Configuration;
 
 namespace LucLopTatMei.MyAirport
 {
@@ -6,7 +10,12 @@ namespace LucLopTatMei.MyAirport
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+
+            var optionsBuilder = new DbContextOptionsBuilder<MyAirportContext>()
+                                    .UseSqlServer(connectionString);
+            
+            using (var db = new MyAirportContext(optionsBuilder.Options)) ;
         }
     }
 }

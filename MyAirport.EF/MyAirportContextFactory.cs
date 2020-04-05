@@ -10,7 +10,7 @@ namespace LucLopTatMei.MyAirport.EF
         public MyAirportContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<MyAirportContext>();
-        optionsBuilder.UseSqlServer("Data Source=blog.db");
+        optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Airport;Integrated Security=True");
 
         return new MyAirportContext(optionsBuilder.Options);
     }

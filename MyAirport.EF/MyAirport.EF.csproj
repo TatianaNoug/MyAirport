@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>LucLopTatMei.MyAirport.EF</RootNamespace>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
 	
