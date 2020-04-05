@@ -1,9 +1,12 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport", "MyAirport\MyAirport.csproj", "{218D9A5F-B992-45C2-950D-BB5E1CCADDB8}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport", "MyAirport\MyAirport.csproj", "{218D9A5F-B992-45C2-950D-BB5E1CCADDB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport.EF", "MyAirport.EF\MyAirport.EF.csproj", "{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.EF", "MyAirport.EF\MyAirport.EF.csproj", "{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport.Api", "MyAirport.Api\MyAirport.Api.csproj", "{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,5 +22,15 @@ Global
 		{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DED1A7AE-7BB6-47FE-B6CD-4647C3C4512D}
 	EndGlobalSection
 EndGlobal
