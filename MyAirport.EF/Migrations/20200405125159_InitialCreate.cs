@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace LucLopTatMei.MyAirport.EF.Migrations
+namespace LLTM.MyAirport.EF.Migrations
 {
     public partial class InitialCreate : Migration
     {
