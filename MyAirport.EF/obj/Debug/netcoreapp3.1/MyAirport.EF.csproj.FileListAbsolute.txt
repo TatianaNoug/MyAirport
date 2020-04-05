@@ -20,5 +20,5 @@ C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\My
 C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.dll
 C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.pdb
 C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.genruntimeconfig.cache
-C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.csproj.CoreCompileInputs.cache
 C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.csprojAssemblyReference.cache
+C:\Users\skywa\Desktop\Noug\C#\MyAirport\MyAirport.EF\obj\Debug\netcoreapp3.1\MyAirport.EF.csproj.CoreCompileInputs.cache

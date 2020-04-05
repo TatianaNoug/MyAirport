@@ -3,18 +3,32 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace LucLopTatMei.MyAirport
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            var loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder
+                    .AddFilter("Microsoft", LogLevel.Warning)
+                    .AddFilter("System", LogLevel.Warning)
+                    .AddFilter("LoggingConsoleApp.Program", LogLevel.Debug)
+                    .AddConsole();
+            });
+            ILogger logger = loggerFactory.CreateLogger<Program>();
+            logger.LogInformation("Example log message");
+
             var connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
 
             var optionsBuilder = new DbContextOptionsBuilder<MyAirportContext>()
-                                    .UseSqlServer(connectionString);
-            
+                                    .UseSqlServer(connectionString)
+                                    .UseLoggerFactory(loggerFactory);
+
             using (var db = new MyAirportContext(optionsBuilder.Options)) ;
 
             System.Console.WriteLine("MyAirport project bonjour!!");
@@ -84,5 +98,7 @@ namespace LucLopTatMei.MyAirport
             }
 
         }
+
+       
     }
 }
