@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LucLopTatMei.MyAirport.EF
+namespace LLTM.MyAirport.EF
 {
     public class Bagage
     {

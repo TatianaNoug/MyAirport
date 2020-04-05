@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace LucLopTatMei.MyAirport.EF
+namespace LLTM.MyAirport.EF
 {
     public class MyAirportContext : DbContext
     {

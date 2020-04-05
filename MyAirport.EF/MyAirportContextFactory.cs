@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Logging;
 
-namespace LucLopTatMei.MyAirport.EF
+namespace LLTM.MyAirport.EF
 {
     class MyAirportContextFactory : IDesignTimeDbContextFactory<MyAirportContext>
     {

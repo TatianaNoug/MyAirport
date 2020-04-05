@@ -1,11 +1,11 @@
-﻿using LucLopTatMei.MyAirport.EF;
+﻿using LLTM.MyAirport.EF;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace LucLopTatMei.MyAirport
+namespace LLTM.MyAirport
 {
     class Program
     {
