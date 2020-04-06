@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using LLTM.MyAirport.EF;
+using LLTM.MyAirport;
 
 namespace MyAirport.Api
 {
@@ -27,8 +28,10 @@ namespace MyAirport.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+
             services.AddDbContext<MyAirportContext>(opt =>
-               opt.UseSqlServer("TodoList"));
+               opt.UseSqlServer(connectionString));
             services.AddControllers();
         }
 

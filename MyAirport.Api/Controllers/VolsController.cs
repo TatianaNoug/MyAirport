@@ -22,9 +22,15 @@ namespace MyAirport.Api.Controllers
 
         // GET: api/Vols
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vol>>> GetVols()
+        public async Task<ActionResult<IEnumerable<Vol>>> GetVols([FromQuery(Name ="bagages")] bool bagage)
         {
-            return await _context.Vols.ToListAsync();
+            DbSet<Vol> dbSet = _context.Vols;
+
+            if (bagage)
+            {
+                return await dbSet.Include(vol => vol.Bagages).ToListAsync();
+            }
+            return await dbSet.ToListAsync();
         }
 
         // GET: api/Vols/5
@@ -37,6 +43,7 @@ namespace MyAirport.Api.Controllers
             {
                 return NotFound();
             }
+            await _context.Entry(vol).Collection(v => v.Bagages).LoadAsync();
 
             return vol;
         }

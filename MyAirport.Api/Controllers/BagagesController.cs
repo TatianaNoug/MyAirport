@@ -9,7 +9,7 @@ using LLTM.MyAirport.EF;
 
 namespace MyAirport.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Bagages")]
     [ApiController]
     public class BagagesController : ControllerBase
     {
