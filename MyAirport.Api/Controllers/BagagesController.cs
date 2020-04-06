@@ -82,7 +82,8 @@ namespace MyAirport.Api.Controllers
             _context.Bagages.Add(bagage);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBagage", new { id = bagage.BagageID }, bagage);
+            //return CreatedAtAction("GetBagage", new { id = bagage.BagageID }, bagage);
+            return CreatedAtAction(nameof(GetBagage), new { id = bagage.BagageID }, bagage);
         }
 
         // DELETE: api/Bagages/5

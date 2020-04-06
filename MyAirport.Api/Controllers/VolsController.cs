@@ -82,7 +82,8 @@ namespace MyAirport.Api.Controllers
             _context.Vols.Add(vol);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetVol", new { id = vol.VolID }, vol);
+            //return CreatedAtAction("GetVol", new { id = vol.VolID }, vol);
+            return CreatedAtAction(nameof(GetVol), new { id = vol.VolID }, vol);
         }
 
         // DELETE: api/Vols/5
