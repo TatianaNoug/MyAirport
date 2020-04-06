@@ -9,7 +9,7 @@ using LLTM.MyAirport.EF;
 
 namespace MyAirport.Api.Controllers
 {
-    [Route("api/Bagages")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BagagesController : ControllerBase
     {
@@ -24,7 +24,9 @@ namespace MyAirport.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bagage>>> GetBagages()
         {
-            return await _context.Bagages.ToListAsync();
+            DbSet < Bagage > bagages =_context.Bagages;
+
+            return await bagages.ToListAsync();
         }
 
         // GET: api/Bagages/5

@@ -24,13 +24,13 @@ namespace MyAirport.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vol>>> GetVols([FromQuery(Name ="bagages")] bool bagage)
         {
-            DbSet<Vol> dbSet = _context.Vols;
+            DbSet<Vol> vols = _context.Vols;
 
             if (bagage)
             {
-                return await dbSet.Include(vol => vol.Bagages).ToListAsync();
+                return await vols.Include(vol => vol.Bagages).ToListAsync();
             }
-            return await dbSet.ToListAsync();
+            return await vols.ToListAsync();
         }
 
         // GET: api/Vols/5
