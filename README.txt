@@ -1,4 +1,4 @@
 # MyAirport
 
 
-Lucas Lopez et Tatiana Meister
+By Lucas Lopez and Tatiana Meister
