@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport", "MyAirport\MyAi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.EF", "MyAirport.EF\MyAirport.EF.csproj", "{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport.Api", "MyAirport.Api\MyAirport.Api.csproj", "{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.Api", "MyAirport.Api\MyAirport.Api.csproj", "{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

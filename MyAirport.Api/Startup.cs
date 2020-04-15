@@ -49,7 +49,7 @@ namespace MyAirport.Api
                 {
                     Version = "v1",
                     Title = "MyAirport API",
-                    Description = "A simple example ASP.NET Core Web API",
+                    Description = "Gestionnaire d'aéroport",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
@@ -62,13 +62,29 @@ namespace MyAirport.Api
                         Url = new Uri("https://example.com/license"),
                     }
                 });
+                
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+                var referencedAssemblies = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
+                referencedAssemblies.ToList().ForEach(assembly =>
+                {
+                    var path = Path.Combine(AppContext.BaseDirectory, $"{assembly.Name}.xml");
+                    if (File.Exists(path))
+                        c.IncludeXmlComments(path);
+                });
             });
+
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseStaticFiles();
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
