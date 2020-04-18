@@ -18,6 +18,8 @@ namespace LLTM.MyAirport.EF
         public int VolID { get; set; }
 
         [Column(TypeName = "char(10)")]
+        [Required]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
         public string Cie { get; set; }
 
         [Column(TypeName = "char(5)")]
@@ -34,6 +36,8 @@ namespace LLTM.MyAirport.EF
         public short? Pax { get; set; }
 
         [Column(TypeName = "char(3)")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [Required]
         public string? Des { get; set; }
 
 
