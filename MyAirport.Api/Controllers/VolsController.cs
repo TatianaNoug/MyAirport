@@ -9,6 +9,7 @@ using LLTM.MyAirport.EF;
 
 namespace MyAirport.Api.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class VolsController : ControllerBase
@@ -20,6 +21,9 @@ namespace MyAirport.Api.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Show every Flight.
+        /// </summary>
         // GET: api/Vols
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vol>>> GetVols([FromQuery(Name ="bagages")] bool bagage)
@@ -33,6 +37,9 @@ namespace MyAirport.Api.Controllers
             return await vols.ToListAsync();
         }
 
+        /// <summary>
+        /// Show a specific Flight.
+        /// </summary>
         // GET: api/Vols/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Vol>> GetVol(int id)
@@ -48,6 +55,9 @@ namespace MyAirport.Api.Controllers
             return vol;
         }
 
+        /// <summary>
+        /// Modify a specific Flight.
+        /// </summary>
         // PUT: api/Vols/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -80,6 +90,9 @@ namespace MyAirport.Api.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Add a specific Flight.
+        /// </summary>
         // POST: api/Vols
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -93,6 +106,9 @@ namespace MyAirport.Api.Controllers
             return CreatedAtAction(nameof(GetVol), new { id = vol.VolID }, vol);
         }
 
+        /// <summary>
+        /// Delete a specific Flight.
+        /// </summary>
         // DELETE: api/Vols/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Vol>> DeleteVol(int id)

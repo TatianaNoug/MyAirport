@@ -9,6 +9,7 @@ using LLTM.MyAirport.EF;
 
 namespace MyAirport.Api.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class BagagesController : ControllerBase
@@ -20,6 +21,9 @@ namespace MyAirport.Api.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Show every Bagages.
+        /// </summary>
         // GET: api/Bagages
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bagage>>> GetBagages()
@@ -29,6 +33,9 @@ namespace MyAirport.Api.Controllers
             return await bagages.ToListAsync();
         }
 
+        /// <summary>
+        /// Show a specific Bagage.
+        /// </summary>
         // GET: api/Bagages/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Bagage>> GetBagage(int id)
@@ -43,6 +50,9 @@ namespace MyAirport.Api.Controllers
             return bagage;
         }
 
+        /// <summary>
+        /// Modify a specific Bagage.
+        /// </summary>
         // PUT: api/Bagages/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -75,6 +85,9 @@ namespace MyAirport.Api.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Add a specific Bagage.
+        /// </summary>
         // POST: api/Bagages
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -88,8 +101,17 @@ namespace MyAirport.Api.Controllers
             return CreatedAtAction(nameof(GetBagage), new { id = bagage.BagageID }, bagage);
         }
 
+
         // DELETE: api/Bagages/5
+        /// <summary>
+        /// Delete a specific Bagage.
+        /// </summary>
+        /// /// <param name="id">Bagage Id</param>
+        /// <returns>Deleted Bagage</returns>
+        /// <response code="200">Bagage deleted successfully</response>
+        /// <response code="404">Bagage not found</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Bagage>> DeleteBagage(int id)
         {
             var bagage = await _context.Bagages.FindAsync(id);

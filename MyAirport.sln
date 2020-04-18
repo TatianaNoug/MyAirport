@@ -6,7 +6,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport", "MyAirport\MyAi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.EF", "MyAirport.EF\MyAirport.EF.csproj", "{69FD682E-82CD-4ADE-AC2D-1D7950E47C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport.Api", "MyAirport.Api\MyAirport.Api.csproj", "{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.Api", "MyAirport.Api\MyAirport.Api.csproj", "{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAirport.GraphQL", "MyAirport.GraphQL\MyAirport.GraphQL.csproj", "{D2C0063A-FE61-42A7-8FCA-BED509ABC76B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAirport.Razor", "MyAirport.Razor\MyAirport.Razor.csproj", "{E25D58A7-4F5F-48DB-A61A-91F2C8C90EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,14 @@ Global
 		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D919FAD8-6E78-4B63-97EB-D94F2A4BCFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C0063A-FE61-42A7-8FCA-BED509ABC76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C0063A-FE61-42A7-8FCA-BED509ABC76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C0063A-FE61-42A7-8FCA-BED509ABC76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C0063A-FE61-42A7-8FCA-BED509ABC76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25D58A7-4F5F-48DB-A61A-91F2C8C90EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25D58A7-4F5F-48DB-A61A-91F2C8C90EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25D58A7-4F5F-48DB-A61A-91F2C8C90EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25D58A7-4F5F-48DB-A61A-91F2C8C90EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
