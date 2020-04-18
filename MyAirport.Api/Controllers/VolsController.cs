@@ -21,10 +21,12 @@ namespace MyAirport.Api.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// Show every Flight.
-        /// </summary>
         // GET: api/Vols
+        /// <summary>
+        /// Find every Vols.
+        /// </summary>
+        /// <returns>Found Vols</returns>
+        /// <response code="200">Vols found successfully</response>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vol>>> GetVols([FromQuery(Name ="bagages")] bool bagage)
         {
@@ -37,10 +39,14 @@ namespace MyAirport.Api.Controllers
             return await vols.ToListAsync();
         }
 
-        /// <summary>
-        /// Show a specific Flight.
-        /// </summary>
         // GET: api/Vols/5
+        /// <summary>
+        /// Find a specific Bagage.
+        /// </summary>
+        /// /// <param name="id">Vol Id</param>
+        /// <returns>Found a specific Vol</returns>
+        /// <response code="200">Vol found successfully</response>
+        /// <response code="404">Vol not found</response>
         [HttpGet("{id}")]
         public async Task<ActionResult<Vol>> GetVol(int id)
         {
@@ -55,12 +61,14 @@ namespace MyAirport.Api.Controllers
             return vol;
         }
 
-        /// <summary>
-        /// Modify a specific Flight.
-        /// </summary>
         // PUT: api/Vols/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Modify a specific Vol.
+        /// </summary>
+        /// /// <param name="id">Vol Id</param>
+        /// <returns>Deleted Bagage</returns>
+        /// <response code="200">Vol modified successfully</response>
+        /// <response code="404">Vol not found</response>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVol(int id, Vol vol)
         {
@@ -90,12 +98,12 @@ namespace MyAirport.Api.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        /// Add a specific Flight.
-        /// </summary>
         // POST: api/Vols
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Add a specific Vol.
+        /// </summary>
+        /// <returns>Add Bagage</returns>
+        /// <response code="200">Bagage added successfully</response>
         [HttpPost]
         public async Task<ActionResult<Vol>> PostVol(Vol vol)
         {
@@ -106,10 +114,14 @@ namespace MyAirport.Api.Controllers
             return CreatedAtAction(nameof(GetVol), new { id = vol.VolID }, vol);
         }
 
-        /// <summary>
-        /// Delete a specific Flight.
-        /// </summary>
         // DELETE: api/Vols/5
+        /// <summary>
+        /// Delete a specific Vol.
+        /// </summary>
+        /// /// <param name="id">Vol Id</param>
+        /// <returns>Deleted Vol</returns>
+        /// <response code="200">Vol deleted successfully</response>
+        /// <response code="404">Vol not found</response>
         [HttpDelete("{id}")]
         public async Task<ActionResult<Vol>> DeleteVol(int id)
         {
