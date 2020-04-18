@@ -21,10 +21,12 @@ namespace MyAirport.Api.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// Show every Bagages.
-        /// </summary>
         // GET: api/Bagages
+        /// <summary>
+        /// Find every Bagages.
+        /// </summary>
+        /// <returns>Found Bagages</returns>
+        /// <response code="200">Bagages found successfully</response>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bagage>>> GetBagages()
         {
@@ -33,10 +35,14 @@ namespace MyAirport.Api.Controllers
             return await bagages.ToListAsync();
         }
 
-        /// <summary>
-        /// Show a specific Bagage.
-        /// </summary>
         // GET: api/Bagages/5
+        /// <summary>
+        /// Find a specific Bagage.
+        /// </summary>
+        /// /// <param name="id">Bagage Id</param>
+        /// <returns>Found Bagage</returns>
+        /// <response code="200">Bagage found successfully</response>
+        /// <response code="404">Bagage not found</response>
         [HttpGet("{id}")]
         public async Task<ActionResult<Bagage>> GetBagage(int id)
         {
@@ -50,12 +56,14 @@ namespace MyAirport.Api.Controllers
             return bagage;
         }
 
+        // PUT: api/Bagages/5
         /// <summary>
         /// Modify a specific Bagage.
         /// </summary>
-        // PUT: api/Bagages/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// /// <param name="id">Bagage Id</param>
+        /// <returns>Modified Bagage</returns>
+        /// <response code="200">Bagage modified successfully</response>
+        /// <response code="404">Bagage not found</response>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBagage(int id, Bagage bagage)
         {
@@ -85,12 +93,12 @@ namespace MyAirport.Api.Controllers
             return NoContent();
         }
 
+        // POST: api/Bagages
         /// <summary>
         /// Add a specific Bagage.
         /// </summary>
-        // POST: api/Bagages
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// <returns>Added Bagage</returns>
+        /// <response code="200">Bagage added successfully</response>
         [HttpPost]
         public async Task<ActionResult<Bagage>> PostBagage(Bagage bagage)
         {
