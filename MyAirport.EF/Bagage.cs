@@ -14,12 +14,13 @@ namespace LLTM.MyAirport.EF
         [Key]
         public int BagageID { get; set; }
 
-        [Required]
+        //[Required]
         public Vol? Vol { get; set; }
 
         [Column(TypeName = "char(12)")]
         public string CodeIata { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime DateCreation { get; set; }
 
         [Column(TypeName = "char(1)")]
