@@ -31,10 +31,8 @@ namespace MyAirport.Razor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            var connectionString = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-
-            services.AddDbContext<MyAirportContext>(opt =>
-               opt.UseSqlServer(connectionString));
+            services.AddDbContext<MyAirportContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

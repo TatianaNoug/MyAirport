@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form>
+    <p>
+        Cie: <input type="text" asp-for="SearchCompany" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<form>
+    <p>
+        Des: <input type="text" asp-for="SearchDes" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -38,35 +50,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Vol) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cie)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lig)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dhc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pkg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imm)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pax)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Des)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.VolID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.VolID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.VolID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Vol)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lig)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dhc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pkg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Des)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.VolID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.VolID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.VolID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

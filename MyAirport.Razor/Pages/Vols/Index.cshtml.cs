@@ -20,9 +20,27 @@ namespace MyAirport.Razor.Pages.Vols
 
         public IList<Vol> Vol { get;set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchCompany { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchDes { get; set; }
+
         public async Task OnGetAsync()
-        {
+        { 
+            var vols = from v in _context.Vols
+                       select v;
+            if (!string.IsNullOrEmpty(SearchCompany))
+            {
+                vols = vols.Where(s => s.Cie.Contains(SearchCompany));
+            }
+            if (!string.IsNullOrEmpty(SearchDes))
+            {
+                vols = vols.Where(s => s.Des.Contains(SearchDes));
+            }
+
             Vol = await _context.Vols.ToListAsync();
         }
+       
     }
 }
